@@ -142,11 +142,11 @@ span[data-lang].active { display: inline; }
 <section class="hero">
   <div class="hero-slider" id="heroSlider">
     <div class="hero-slide">
-      <video autoplay muted loop playsinline><source src="yama.MP4" type="video/mp4"></video>
+      <video id="video0" muted playsinline onended="changeSlide(1)"><source src="yama.MP4" type="video/mp4"></video>
       <div class="hero-slide-overlay"></div>
     </div>
     <div class="hero-slide">
-      <video autoplay muted loop playsinline><source src="genseki.MP4" type="video/mp4"></video>
+      <video id="video1" muted playsinline onended="changeSlide(1)"><source src="genseki.MP4" type="video/mp4"></video>
       <div class="hero-slide-overlay"></div>
     </div>
   </div>
@@ -162,10 +162,10 @@ span[data-lang].active { display: inline; }
     <div class="hero-text">
       <div class="hero-eyebrow">Pakistan · Untreated · Certified</div>
       <h1 class="hero-title">
-        <span data-lang="ja" class="active">パキスタン産<br><em>無処理原石</em>の<br>希少な美しさ</span>
-        <span data-lang="ur" class="rtl">پاکستانی<br><em>قدرتی جواہرات</em><br>کی نادر خوبصورتی</span>
-        <span data-lang="zh">來自巴基斯坦<br><em>天然無處理</em><br>珍稀原石</span>
-        <span data-lang="en"><em>Untreated</em> gems<br>from the heart<br>of Pakistan</span>
+        <span data-lang="ja" class="active">パキスタンから<br><em>採れたての原石</em>の<br>希少な美しさ</span>
+        <span data-lang="ur" class="rtl">پاکستان سے<br><em>تازہ نکالے گئے جواہرات</em><br>کی نادر خوبصورتی</span>
+        <span data-lang="zh">來自巴基斯坦<br><em>新鮮採掘原石</em><br>的珍稀之美</span>
+        <span data-lang="en">From Pakistan,<br>the rare beauty of<br><em>freshly mined gems</em></span>
       </h1>
       <p class="hero-desc">
         <span data-lang="ja" class="active">ナガル渓谷のアクアマリン、スワット産エメラルド。産地直送、鑑定書付きの無処理原石をコレクター・バイヤー向けに提供します。</span>
@@ -181,7 +181,7 @@ span[data-lang].active { display: inline; }
     <div class="hero-badge">
       <div class="hero-badge-name">Aquamarine · アクアマリン</div>
       <div class="hero-badge-sub">Nagar Valley, Gilgit-Baltistan · Pakistan</div>
-      <span class="hero-badge-tag">GGI Certified · Unheated</span>
+      <span class="hero-badge-tag">GGI 鑑定書付き · Unheated</span>
     </div>
   </div>
 </section>
@@ -223,11 +223,11 @@ span[data-lang].active { display: inline; }
       <div class="spec-row"><span class="spec-key"><span data-lang="ja" class="active">色調</span><span data-lang="ur">رنگ</span><span data-lang="zh">顏色</span><span data-lang="en">Color</span></span><span class="spec-val">Light Blue, Transparent to Semi-Transparent</span></div>
       <div class="spec-row"><span class="spec-key"><span data-lang="ja" class="active">産地</span><span data-lang="ur">پیدائش</span><span data-lang="zh">產地</span><span data-lang="en">Origin</span></span><span class="spec-val">Nagar Valley, Gilgit-Baltistan, Pakistan</span></div>
       <div class="spec-row"><span class="spec-key"><span data-lang="ja" class="active">処理</span><span data-lang="ur">علاج</span><span data-lang="zh">處理</span><span data-lang="en">Treatment</span></span><span class="spec-val"><span data-lang="ja" class="active">無加熱・無処理</span><span data-lang="ur">غیر معالج</span><span data-lang="zh">未加熱，無處理</span><span data-lang="en">Unheated, Untreated</span></span></div>
-      <div class="spec-row"><span class="spec-key"><span data-lang="ja" class="active">鑑定</span><span data-lang="ur">سرٹیفکیٹ</span><span data-lang="zh">鑑定</span><span data-lang="en">Certificate</span></span><span class="spec-val">GGI (Gem & Gemmology Institute)</span></div>
-      <div class="spec-row"><span class="spec-key"><span data-lang="ja" class="active">随伴標本</span><span data-lang="ur">متعلقہ نمونے</span><span data-lang="zh">隨附標本</span><span data-lang="en">Associated pieces</span></span><span class="spec-val"><span data-lang="ja" class="active">10点（合計約71kg）</span><span data-lang="ur">10 نمونے (کل 71kg)</span><span data-lang="zh">10件（合計約71kg）</span><span data-lang="en">10 pieces (total approx. 71kg)</span></span></div>
+      <div class="spec-row"><span class="spec-key"><span data-lang="ja" class="active">鑑定書</span><span data-lang="ur">سرٹیفکیٹ</span><span data-lang="zh">鑑定書</span><span data-lang="en">Certificate</span></span><span class="spec-val">GGI (Gem & Gemmology Institute)</span></div>
+      <div class="spec-row"><span class="spec-key"><span data-lang="ja" class="active">随伴標本</span><span data-lang="ur">متعلقہ نمونے</span><span data-lang="zh">隨附標本</span><span data-lang="en">Associated pieces</span></span><span class="spec-val"><span data-lang="ja" class="active">10点（合計約32kg）</span><span data-lang="ur">10 نمونے (کل 32kg)</span><span data-lang="zh">10件（合計約32kg）</span><span data-lang="en">10 pieces (total approx. 32kg)</span></span></div>
     </div>
-    <p class="product-desc-text"><span data-lang="ja" class="active">パキスタン・ギルギット・バルティスタン州ナガル渓谷産の希少なアクアマリン原石です。無加熱・無処理であることがGGI鑑定書により公式に証明されており、日本への正規輸入・通関手続きも完了しています。</span><span data-lang="ur" class="rtl">پاکستان کی ناگر وادی سے نایاب فیروزہ پتھر۔ GGI سرٹیفکیٹ کے ساتھ غیر معالج اور جاپان میں قانونی طور پر درآمد شدہ۔</span><span data-lang="zh">來自巴基斯坦吉爾吉特-巴爾蒂斯坦納加爾谷的稀有海藍寶原石。GGI官方認證未加熱及無處理，已完成日本清關手續。</span><span data-lang="en">A rare aquamarine rough specimen from the Nagar Valley, Gilgit-Baltistan, Pakistan. Officially certified unheated and untreated by GGI, with all Japanese customs clearance completed.</span></p>
-    <div class="cert-badge"><span class="cert-icon">📋</span><div class="cert-text"><strong>GGI Certificate of Authenticity</strong><span data-lang="ja" class="active">産地・無処理を公式証明済み</span><span data-lang="ur">پیدائش اور غیر معالج سرکاری تصدیق</span><span data-lang="zh">產地及處理狀態官方認證</span><span data-lang="en">Origin & treatment officially documented</span></div></div>
+    <p class="product-desc-text"><span data-lang="ja" class="active">パキスタン・ギルギット・バルティスタン州ナガル渓谷産の希少なアクアマリン原石です。無加熱・無処理であることがGGI鑑定書により公式に証明されており、日本への正規輸入・通関手続きも完了しています。</span><span data-lang="ur" class="rtl">پاکستان کی ناگر وادی سے نایاب فیروزہ پتھر۔ GGI سرٹیفکیٹ کے ساتھ غیر معالج اور جاپان میں قانونی طور پر درآمد شدہ۔</span><span data-lang="zh">來自巴基斯坦吉爾吉特-巴爾蒂斯坦納加爾谷的稀有海藍寶原石。GGI官方鑑定書認證未加熱及無處理，已完成日本清關手續。</span><span data-lang="en">A rare aquamarine rough specimen from the Nagar Valley, Gilgit-Baltistan, Pakistan. Officially certified unheated and untreated by GGI certificate, with all Japanese customs clearance completed.</span></p>
+    <div class="cert-badge"><span class="cert-icon">📋</span><div class="cert-text"><strong>GGI 鑑定書</strong><span data-lang="ja" class="active">産地・無処理を公式証明済み</span><span data-lang="ur">پیدائش اور غیر معالج سرکاری تصدیق</span><span data-lang="zh">產地及處理狀態官方鑑定</span><span data-lang="en">Origin & treatment officially certified</span></div></div>
     <a href="mailto:info@sonugems.com" class="enquire-btn"><span data-lang="ja" class="active">購入・商談のお問い合わせ →</span><span data-lang="ur">خریداری کے لیے رابطہ کریں →</span><span data-lang="zh">查詢此標本 →</span><span data-lang="en">Enquire about this piece →</span></a>
   </div>
 </section>
@@ -236,7 +236,7 @@ span[data-lang].active { display: inline; }
     <div class="section-eyebrow">Why Sonu Gems</div>
     <h2 class="section-title"><span data-lang="ja" class="active">信頼の根拠</span><span data-lang="ur" class="rtl">ہم پر اعتماد کیوں</span><span data-lang="zh">我們的承諾</span><span data-lang="en">Our commitment</span></h2>
     <div class="trust-items">
-      <div class="trust-item"><div class="trust-icon">📋</div><div class="trust-title"><span data-lang="ja" class="active">GGI鑑定書付き</span><span data-lang="ur">GGI سرٹیفائیڈ</span><span data-lang="zh">GGI認證</span><span data-lang="en">GGI Certified</span></div><div class="trust-desc"><span data-lang="ja" class="active">産地・無加熱・無処理をGGIが公式に証明。鑑定書を完備しています。</span><span data-lang="ur" class="rtl">GGI نے پیدائش اور غیر معالج ہونے کی سرکاری تصدیق کی ہے۔</span><span data-lang="zh">GGI官方認證產地、未加熱及無處理狀態。</span><span data-lang="en">GGI officially certifies origin, unheated and untreated status.</span></div></div>
+      <div class="trust-item"><div class="trust-icon">📋</div><div class="trust-title"><span data-lang="ja" class="active">GGI鑑定書付き</span><span data-lang="ur">GGI سرٹیفائیڈ</span><span data-lang="zh">GGI鑑定書</span><span data-lang="en">GGI Certified</span></div><div class="trust-desc"><span data-lang="ja" class="active">産地・無加熱・無処理をGGIが公式に証明。鑑定書を完備しています。</span><span data-lang="ur" class="rtl">GGI نے پیدائش اور غیر معالج ہونے کی سرکاری تصدیق کی ہے۔</span><span data-lang="zh">GGI官方鑑定書認證產地、未加熱及無處理狀態。</span><span data-lang="en">GGI officially certifies origin, unheated and untreated status.</span></div></div>
       <div class="trust-item"><div class="trust-icon">📍</div><div class="trust-title"><span data-lang="ja" class="active">産地直接調達</span><span data-lang="ur">براہ راست ماخذ</span><span data-lang="zh">直接產地採購</span><span data-lang="en">Direct source</span></div><div class="trust-desc"><span data-lang="ja" class="active">パキスタン・ナガル渓谷の鉱山から直接仕入れ。中間業者なし。</span><span data-lang="ur" class="rtl">پاکستان کی ناگر وادی کی کانوں سے براہ راست۔ کوئی بیچولیا نہیں۔</span><span data-lang="zh">直接來自巴基斯坦納加爾谷礦場，無中間商。</span><span data-lang="en">Sourced directly from the Nagar Valley mines. No middlemen.</span></div></div>
       <div class="trust-item"><div class="trust-icon">✅</div><div class="trust-title"><span data-lang="ja" class="active">正規輸入・通関済み</span><span data-lang="ur">قانونی درآمد</span><span data-lang="zh">合法進口清關完成</span><span data-lang="en">Legal import completed</span></div><div class="trust-desc"><span data-lang="ja" class="active">日本への正規輸入・通関手続きはすべて完了済みです。</span><span data-lang="ur" class="rtl">جاپان میں تمام قانونی درآمد اور کسٹم کلیئرنس مکمل ہو چکی ہے۔</span><span data-lang="zh">已完成所有日本正規進口及清關手續。</span><span data-lang="en">All Japanese customs clearance formally completed.</span></div></div>
     </div>
@@ -246,7 +246,7 @@ span[data-lang].active { display: inline; }
   <div class="contact-section">
     <div class="section-eyebrow" style="text-align:center;">Contact</div>
     <h2><span data-lang="ja" class="active">購入・商談のお問い合わせ</span><span data-lang="ur" class="rtl">خریداری اور تجارت کے لیے رابطہ</span><span data-lang="zh">購買及商業查詢</span><span data-lang="en">Enquiries & trade buyers</span></h2>
-    <p><span data-lang="ja" class="active">コレクター・宝飾業者・香港バイヤーの方、またオークション出品をご検討の方は、お気軽にご連絡ください。日本語・英語・中国語・ウルドゥー語にて対応いたします。</span><span data-lang="ur" class="rtl">کلکٹرز، زیورات کے تاجر، ہانگ کانگ کے خریدار اور نیلامی گھروں کا خیر مقدم ہے۔</span><span data-lang="zh">歡迎收藏家、珠寶商、香港買家及拍賣行查詢。</span><span data-lang="en">Collectors, jewellers, Hong Kong buyers, and auction houses are welcome. We respond in Japanese, English, Chinese, and Urdu.</span></p>
+    <p><span data-lang="ja" class="active">コレクター・宝飾業者・バイヤーの方はお気軽にご連絡ください。</span><span data-lang="ur" class="rtl">کلکٹرز، زیورات کے تاجر اور خریدار بلا جھجھک رابطہ کریں۔</span><span data-lang="zh">歡迎收藏家、珠寶商及買家隨時查詢。</span><span data-lang="en">Collectors, jewellers, and buyers are welcome to contact us freely.</span></p>
     <a href="mailto:info@sonugems.com" class="contact-btn"><span data-lang="ja" class="active">メールでお問い合わせ →</span><span data-lang="ur">ای میل کریں →</span><span data-lang="zh">立即查詢 →</span><span data-lang="en">Get in touch →</span></a>
   </div>
 </div>
@@ -257,14 +257,27 @@ span[data-lang].active { display: inline; }
 <script>
 var currentSlide = 0;
 var totalSlides = 2;
-function changeSlide(dir) { currentSlide = (currentSlide + dir + totalSlides) % totalSlides; updateSlider(); }
-function goToSlide(index) { currentSlide = index; updateSlider(); }
+function changeSlide(dir) {
+  currentSlide = (currentSlide + dir + totalSlides) % totalSlides;
+  updateSlider();
+}
+function goToSlide(index) {
+  currentSlide = index;
+  updateSlider();
+}
 function updateSlider() {
   var slider = document.getElementById('heroSlider');
   if (slider) { slider.style.transform = 'translateX(-' + (currentSlide * 50) + '%)'; }
   document.querySelectorAll('.slider-dot').forEach(function(dot, i) { dot.classList.toggle('active', i === currentSlide); });
+  for (var i = 0; i < totalSlides; i++) {
+    var v = document.getElementById('video' + i);
+    if (v) { if (i === currentSlide) { v.currentTime = 0; v.play(); } else { v.pause(); } }
+  }
 }
-setInterval(function() { changeSlide(1); }, 6000);
+document.addEventListener('DOMContentLoaded', function() {
+  var v = document.getElementById('video0');
+  if (v) v.play();
+});
 function setLang(lang) {
   document.querySelectorAll('[data-lang]').forEach(function(el) { el.classList.toggle('active', el.getAttribute('data-lang') === lang); });
   document.querySelectorAll('.lang-btn').forEach(function(btn) {
