@@ -114,7 +114,32 @@ span[data-lang].active { display: inline; }
   .lang-switcher { gap: 3px; }
   .lang-btn { padding: 3px 6px; font-size: 11px; }
 }
-</style>
+/* ===== 宝石メニュー ===== */
+    .gem-menu { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 0 0 2.5rem; }
+    .gem-btn { padding: 10px 26px; border: 1px solid #C8C2B4; background: transparent; color: #4A463C; font-size: 14px; letter-spacing: 0.12em; cursor: pointer; border-radius: 2px; font-family: inherit; text-align: center; }
+    .gem-btn.active { background: #4A6B72; border-color: #4A6B72; color: #fff; }
+    .gem-btn.soon { opacity: 0.45; cursor: default; }
+    .gem-btn.soon small { display: block; font-size: 10px; letter-spacing: 0.15em; margin-top: 3px; }
+
+    /* ===== 17kgメイン原石 ===== */
+    .hero-stone { margin: 0 0 2.5rem; }
+    .hero-stone-main { position: relative; cursor: pointer; overflow: hidden; border-radius: 4px; }
+    .hero-stone-main img { width: 100%; max-height: 560px; object-fit: cover; display: block; }
+    .hero-stone-badge { position: absolute; top: 16px; left: 16px; background: rgba(20,24,26,0.82); color: #fff; padding: 10px 18px; border-radius: 3px; font-size: 13px; letter-spacing: 0.08em; line-height: 1.6; }
+    .hero-stone-badge strong { display: block; font-size: 26px; letter-spacing: 0.05em; }
+    .hero-stone-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; margin-top: 0.6rem; }
+    .hero-stone-thumbs img { width: 100%; aspect-ratio: 4/3; object-fit: cover; cursor: pointer; border-radius: 3px; display: block; }
+
+    /* ===== キャプション ===== */
+    .gallery-item { position: relative; }
+    .gallery-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 12px 10px; background: linear-gradient(transparent, rgba(0,0,0,0.65)); color: #fff; font-size: 12.5px; letter-spacing: 0.06em; pointer-events: none; }
+
+    @media (max-width: 600px) {
+      .gem-btn { padding: 8px 14px; font-size: 12px; }
+      .hero-stone-badge { font-size: 11px; padding: 8px 12px; }
+      .hero-stone-badge strong { font-size: 19px; }
+      .gallery-caption { font-size: 10.5px; padding: 18px 8px 7px; }
+    }</style>
 </head>
 <body>
 <nav class="nav">
@@ -186,17 +211,35 @@ span[data-lang].active { display: inline; }
   <div class="section-eyebrow">Collection</div>
   <h2 class="section-title"><span data-lang="ja" class="active">アクアマリン原石ギャラリー</span><span data-lang="ur" class="rtl">فیروزہ پتھر گیلری</span><span data-lang="zh">海藍寶原石系列</span><span data-lang="en">Aquamarine specimen gallery</span></h2>
   <p class="section-sub"><span data-lang="ja" class="active">ナガル渓谷産、GGI鑑別書付き無加熱原石。全10点の随伴標本。</span><span data-lang="ur" class="rtl">ناگر وادی سے GGI سرٹیفائیڈ، 10 نمونے دستیاب۔</span><span data-lang="zh">納加爾谷產，GGI認證未加熱原石，共10件隨附標本。</span><span data-lang="en">Nagar Valley origin, GGI certified unheated specimens. 10 associated pieces available.</span></p>
-  <div class="gallery-grid">
-    <div class="gallery-item large" onclick="openLightbox('IMG_9378.JPG')"><img src="IMG_9378.JPG" alt="Aquamarine" loading="lazy"></div>
-    <div class="gallery-item" onclick="openLightbox('IMG_9379.JPG')"><img src="IMG_9379.JPG" alt="Aquamarine" loading="lazy"></div>
-    <div class="gallery-item" onclick="openLightbox('IMG_9380.JPG')"><img src="IMG_9380.JPG" alt="Aquamarine" loading="lazy"></div>
-    <div class="gallery-item" onclick="openLightbox('IMG_9377.JPG')"><img src="IMG_9377.JPG" alt="Aquamarine" loading="lazy"></div>
-    <div class="gallery-item" onclick="openLightbox('IMG_9375.JPG')"><img src="IMG_9375.JPG" alt="Aquamarine" loading="lazy"></div>
-    <div class="gallery-item" onclick="openLightbox('IMG_9374.JPG')"><img src="IMG_9374.JPG" alt="Aquamarine" loading="lazy"></div>
-    <div class="gallery-item" onclick="openLightbox('IMG_9373.JPG')"><img src="IMG_9373.JPG" alt="Aquamarine" loading="lazy"></div>
-    <div class="gallery-item" onclick="openLightbox('IMG_9372.JPG')"><img src="IMG_9372.JPG" alt="Aquamarine" loading="lazy"></div>
-    <div class="gallery-item" onclick="openLightbox('IMG_9371.JPG')"><img src="IMG_9371.JPG" alt="Aquamarine" loading="lazy"></div>
-  </div>
+ <div class="gem-menu">
+          <button class="gem-btn active" type="button"><span data-lang="ja" class="active">アクアマリン</span><span data-lang="ur" class="rtl">ایکوا میرین</span><span data-lang="zh">海藍寶石</span><span data-lang="en">Aquamarine</span></button>
+          <button class="gem-btn soon" type="button"><span data-lang="ja" class="active">エメラルド</span><span data-lang="ur" class="rtl">زمرد</span><span data-lang="zh">祖母綠</span><span data-lang="en">Emerald</span><small>COMING SOON</small></button>
+          <button class="gem-btn soon" type="button"><span data-lang="ja" class="active">ピンクトパーズ</span><span data-lang="ur" class="rtl">گلابی پکھراج</span><span data-lang="zh">粉紅托帕石</span><span data-lang="en">Pink Topaz</span><small>COMING SOON</small></button>
+        </div>
+
+        <div class="hero-stone">
+          <div class="hero-stone-main" onclick="openLightbox('6-02.jpg')">
+            <img src="6-02.jpg" alt="Aquamarine 17kg specimen" loading="lazy">
+            <div class="hero-stone-badge"><span data-lang="ja" class="active">メイン原石</span><span data-lang="ur" class="rtl">مرکزی پتھر</span><span data-lang="zh">主標本</span><span data-lang="en">Main Specimen</span><strong>17,012 g</strong>350 × 380 × 280 mm</div>
+          </div>
+          <div class="hero-stone-thumbs">
+            <img src="6-03.jpg" alt="Aquamarine 17kg specimen" loading="lazy" onclick="openLightbox('6-03.jpg')">
+            <img src="6-04.jpg" alt="Aquamarine 17kg specimen" loading="lazy" onclick="openLightbox('6-04.jpg')">
+            <img src="6-05.jpg" alt="Aquamarine 17kg specimen" loading="lazy" onclick="openLightbox('6-05.jpg')">
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item" onclick="openLightbox('IMG_9378.JPG')"><img src="IMG_9378.JPG" alt="Aquamarine" loading="lazy"><div class="gallery-caption">470 g · 113×104×72 mm</div></div>
+          <div class="gallery-item" onclick="openLightbox('IMG_9379.JPG')"><img src="IMG_9379.JPG" alt="Aquamarine" loading="lazy"><div class="gallery-caption">2,378 g · 234×180×103 mm</div></div>
+          <div class="gallery-item" onclick="openLightbox('IMG_9380.JPG')"><img src="IMG_9380.JPG" alt="Aquamarine" loading="lazy"><div class="gallery-caption">4,286 g · 219×149×110 mm</div></div>
+          <div class="gallery-item" onclick="openLightbox('IMG_9377.JPG')"><img src="IMG_9377.JPG" alt="Aquamarine" loading="lazy"><div class="gallery-caption">2,266 g · 155×102×84 mm</div></div>
+          <div class="gallery-item" onclick="openLightbox('IMG_9375.JPG')"><img src="IMG_9375.JPG" alt="Aquamarine" loading="lazy"><div class="gallery-caption">744 g · 125×92×105 mm</div></div>
+          <div class="gallery-item" onclick="openLightbox('IMG_9374.JPG')"><img src="IMG_9374.JPG" alt="Aquamarine" loading="lazy"><div class="gallery-caption">980 g · 157×149×77 mm</div></div>
+          <div class="gallery-item" onclick="openLightbox('IMG_9373.JPG')"><img src="IMG_9373.JPG" alt="Aquamarine" loading="lazy"><div class="gallery-caption">1,426 g · 139×108×105 mm</div></div>
+          <div class="gallery-item" onclick="openLightbox('IMG_9372.JPG')"><img src="IMG_9372.JPG" alt="Aquamarine" loading="lazy"><div class="gallery-caption">1,684 g · 142×94×81 mm</div></div>
+          <div class="gallery-item" onclick="openLightbox('IMG_9371.JPG')"><img src="IMG_9371.JPG" alt="Aquamarine" loading="lazy"><div class="gallery-caption">980 g · 171×102×106 mm</div></div>
+        </div>
 </section>
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <button class="lightbox-close" onclick="closeLightbox()">×</button>
