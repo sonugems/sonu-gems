@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emerald — tono jewelry</title>
+<script>if('scrollRestoration' in history){history.scrollRestoration='manual';}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#ffffff;
+    --ink:#1c1c1a;
+    --black:#0a0a0a;
+    --gold:#b8935a;
+    --gold-soft:#d8c39a;
+    --line:rgba(28,28,26,0.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{overflow-anchor:none;}
+  body{
+    background:#ffffff;
+    color:var(--ink);
+    font-family:'Zen Kaku Gothic New',sans-serif;
+    font-weight:300;
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:'Cormorant',serif; letter-spacing:0.01em;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  a{color:inherit;}
+
+  /* ---------- TOP BAND ---------- */
+  .top-band{
+    background:#ffffff;
+    padding:16px 32px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid var(--line);
+  }
+  .top-band .side{flex:1; display:flex; align-items:center;}
+  .top-band .side.right{justify-content:flex-end;}
+  .logo-text{
+    font-family:'Cormorant', serif;
+    font-weight:500;
+    font-size:24px;
+    letter-spacing:0.06em;
+    color:var(--gold);
+    text-decoration:none;
+  }
+  .back-link{
+    font-size:13px;
+    letter-spacing:0.04em;
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:1px solid var(--gold);
+    padding-bottom:2px;
+  }
+  @media (max-width:640px){
+    .top-band{padding:12px 20px;}
+    .logo-text{font-size:19px;}
+  }
+
+  /* ---------- PAGE HEADER ---------- */
+  .page-head{
+    text-align:center;
+    padding:64px 0 40px;
+  }
+  .page-head .kicker{
+    font-size:13px;
+    letter-spacing:0.16em;
+    color:var(--gold);
+    margin-bottom:18px;
+  }
+  .page-head h1{
+    font-family:'Cormorant', serif;
+    font-weight:500;
+    font-size:clamp(34px,5vw,54px);
+    margin-bottom:18px;
+  }
+
+  /* ---------- GRID ---------- */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    padding-bottom:80px;
+  }
+  @media (max-width:900px){
+    .grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:560px){
+    .grid{grid-template-columns:1fr;}
+  }
+  .card{
+    text-decoration:none;
+    color:inherit;
+  }
+  .card .thumb{
+    position:relative;
+    aspect-ratio:4/5;
+    overflow:hidden;
+    background:#111;
+    margin-bottom:16px;
+    cursor:zoom-in;
+  }
+  .card .thumb img{
+    width:100%;height:100%;object-fit:cover;
+    transition:transform 0.5s ease;
+  }
+  .card:hover .thumb img{transform:scale(1.05);}
+  .card .thumb .play-btn{
+    position:absolute;
+    bottom:14px;left:50%;
+    transform:translateX(-50%);
+    width:44px;height:44px;
+    border-radius:50%;
+    background:rgba(10,10,10,0.55);
+    border:1px solid rgba(255,255,255,0.7);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    pointer-events:none;
+    transition:background 0.3s ease;
+  }
+  .card:hover .thumb .play-btn{background:rgba(184,147,90,0.85);}
+  .card .thumb .play-btn::after{
+    content:'';
+    border-style:solid;
+    border-width:8px 0 8px 13px;
+    border-color:transparent transparent transparent #fff;
+    margin-left:3px;
+  }
+  .card .spec{
+    font-size:12.5px;
+    color:rgba(28,28,26,0.55);
+    margin-bottom:6px;
+  }
+
+  /* ---------- CONTACT STRIP ---------- */
+  .contact{
+    background:#f7f5f1;
+    padding:64px 0;
+    text-align:center;
+  }
+  .contact .narrative-label{
+    font-size:13px;
+    letter-spacing:0.12em;
+    color:var(--gold);
+    margin-bottom:20px;
+  }
+  .contact h2{
+    font-family:'Cormorant', serif;
+    font-size:clamp(22px,2.6vw,30px);
+    font-weight:500;
+    margin-bottom:28px;
+  }
+  .contact a.mail{
+    display:inline-block;
+    font-size:14px;
+    color:var(--ink);
+    border-bottom:1px solid var(--gold);
+    padding-bottom:4px;
+    text-decoration:none;
+  }
+
+  .site-footer{
+    padding:32px 0;
+    font-size:12px;
+    color:rgba(28,28,26,0.5);
+    text-align:center;
+    border-top:1px solid var(--line);
+  }
+
+  /* ---------- LIGHTBOX ---------- */
+  .lightbox{
+    display:none;
+    position:fixed;inset:0;
+    background:rgba(10,10,10,0.92);
+    z-index:100;
+    align-items:center;
+    justify-content:center;
+  }
+  .lightbox.active{display:flex;}
+  .lightbox img,.lightbox video{max-width:92vw;max-height:88vh;object-fit:contain;}
+  .lightbox video{display:none;}
+  .lightbox-close{
+    position:absolute;top:24px;right:32px;
+    background:none;border:none;color:#fff;
+    font-size:32px;cursor:pointer;line-height:1;
+  }
+</style>
+</head>
+<body>
+
+  <div class="top-band">
+    <div class="side left">
+      <a class="back-link" href="index.html">← Collection</a>
+    </div>
+    <a class="logo-text" href="index.html">tono jewelry</a>
+    <div class="side right"></div>
+  </div>
+
+  <div class="page-head">
+    <div class="kicker">Swat Valley, Pakistan</div>
+    <h1 class="serif">Emerald</h1>
+  </div>
+
+  <div class="wrap">
+
+    <div class="grid">
+      <a class="card" href="javascript:void(0)" onclick="openLightbox('em1.jpg')">
+        <div class="thumb"><img src="em1.jpg" alt="Emerald specimen"></div>
+        <div class="spec">7 g</div>
+      </a>
+      <a class="card" href="javascript:void(0)" onclick="openLightbox('em2.jpg')">
+        <div class="thumb"><img src="em2.jpg" alt="Emerald specimen"></div>
+        <div class="spec">12 g</div>
+      </a>
+      <a class="card" href="javascript:void(0)" onclick="openLightbox('em3.jpg')">
+        <div class="thumb"><img src="em3.jpg" alt="Emerald specimen"></div>
+        <div class="spec">11 g</div>
+      </a>
+      <a class="card" href="javascript:void(0)" onclick="openLightbox('em4.jpg')">
+        <div class="thumb"><img src="em4.jpg" alt="Emerald specimen"></div>
+        <div class="spec">6 g</div>
+      </a>
+      <a class="card" href="javascript:void(0)" onclick="openLightbox('em5.jpg')">
+        <div class="thumb"><img src="em5.jpg" alt="Emerald specimen"></div>
+        <div class="spec">7 g</div>
+      </a>
+      <a class="card" href="javascript:void(0)" onclick="openLightbox('em6.jpg')">
+        <div class="thumb"><img src="em6.jpg" alt="Emerald specimen"></div>
+        <div class="spec">8 g</div>
+      </a>
+    </div>
+
+  </div>
+
+  <section class="contact">
+    <div class="wrap">
+      <div class="narrative-label serif">Enquiries & Trade Buyers</div>
+      <h2 class="serif">コレクター・宝飾業者の方はお気軽にご連絡ください。</h2>
+      <a class="mail" href="mailto:info@tono.ltd">info@tono.ltd</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    © 2026 tono jewelry · Tokyo, Japan
+  </footer>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
+    <video id="lightbox-video" controls playsinline onclick="event.stopPropagation()"></video>
+  </div>
+
+  <script>
+    // videoSrc を渡すと動画を、渡さなければ画像を表示する
+    function openLightbox(imgSrc, videoSrc){
+      const img = document.getElementById('lightbox-img');
+      const vid = document.getElementById('lightbox-video');
+      if(videoSrc){
+        img.style.display = 'none';
+        vid.style.display = 'block';
+        vid.src = videoSrc;
+        vid.play();
+      } else {
+        vid.pause();
+        vid.removeAttribute('src');
+        vid.style.display = 'none';
+        img.style.display = 'block';
+        img.src = imgSrc;
+      }
+      document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox(){
+      const vid = document.getElementById('lightbox-video');
+      vid.pause();
+      document.getElementById('lightbox').classList.remove('active');
+    }
+    window.addEventListener('load', function(){ window.scrollTo(0,0); });
+  </script>
+
+</body>
+</html>

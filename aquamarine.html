@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aquamarine — tono jewelry</title>
+<script>if('scrollRestoration' in history){history.scrollRestoration='manual';}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#ffffff;
+    --ink:#1c1c1a;
+    --black:#0a0a0a;
+    --gold:#b8935a;
+    --gold-soft:#d8c39a;
+    --line:rgba(28,28,26,0.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{overflow-anchor:none;}
+  body{
+    background:#ffffff;
+    color:var(--ink);
+    font-family:'Zen Kaku Gothic New',sans-serif;
+    font-weight:300;
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:'Cormorant',serif; letter-spacing:0.01em;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  a{color:inherit;}
+
+  /* ---------- TOP BAND ---------- */
+  .top-band{
+    background:#ffffff;
+    padding:16px 32px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid var(--line);
+  }
+  .top-band .side{flex:1; display:flex; align-items:center;}
+  .top-band .side.right{justify-content:flex-end;}
+  .logo-text{
+    font-family:'Cormorant', serif;
+    font-weight:500;
+    font-size:24px;
+    letter-spacing:0.06em;
+    color:var(--gold);
+    text-decoration:none;
+  }
+  .back-link{
+    font-size:13px;
+    letter-spacing:0.04em;
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:1px solid var(--gold);
+    padding-bottom:2px;
+  }
+  @media (max-width:640px){
+    .top-band{padding:12px 20px;}
+    .logo-text{font-size:19px;}
+  }
+
+  /* ---------- PAGE HEADER ---------- */
+  .page-head{
+    text-align:center;
+    padding:64px 0 40px;
+  }
+  .page-head .kicker{
+    font-size:13px;
+    letter-spacing:0.16em;
+    color:var(--gold);
+    margin-bottom:18px;
+  }
+  .page-head h1{
+    font-family:'Cormorant', serif;
+    font-weight:500;
+    font-size:clamp(34px,5vw,54px);
+    margin-bottom:18px;
+  }
+  .page-head p{
+    max-width:52ch;
+    margin:0 auto;
+    font-size:14.5px;
+    color:rgba(28,28,26,0.65);
+  }
+
+  /* ---------- MAIN SPECIMEN ---------- */
+  .hero-stone{
+    display:grid;
+    grid-template-columns:1.4fr 1fr;
+    gap:16px;
+    margin-bottom:24px;
+  }
+  .hero-stone-main{
+    position:relative;
+    aspect-ratio:4/3;
+    overflow:hidden;
+    background:#111;
+    cursor:zoom-in;
+  }
+  .hero-stone-main img{width:100%;height:100%;object-fit:cover;}
+  .hero-stone-thumbs{
+    display:grid;
+    grid-template-rows:repeat(3,1fr);
+    gap:16px;
+  }
+  .hero-stone-thumbs img{
+    width:100%;height:100%;object-fit:cover;
+    aspect-ratio:4/3;
+    cursor:zoom-in;
+  }
+  .hero-stone-info{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:16px;
+    padding:24px 0 56px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:56px;
+  }
+  .hero-stone-info .badge{
+    font-size:12px;
+    letter-spacing:0.1em;
+    color:var(--gold);
+    margin-bottom:8px;
+  }
+  .hero-stone-info h2{
+    font-family:'Cormorant', serif;
+    font-size:28px;
+    font-weight:500;
+    margin-bottom:6px;
+  }
+  .hero-stone-info .spec{
+    font-size:13px;
+    color:rgba(28,28,26,0.6);
+  }
+  .hero-stone-info .price{
+    text-align:right;
+  }
+  .hero-stone-info .price .amount{
+    font-family:'Cormorant', serif;
+    font-size:26px;
+    font-weight:500;
+    color:var(--ink);
+  }
+  .hero-stone-info .price .label{
+    font-size:11.5px;
+    letter-spacing:0.08em;
+    color:rgba(28,28,26,0.5);
+    margin-top:4px;
+  }
+
+  /* ---------- SECTION HEAD ---------- */
+  .section-head{
+    text-align:center;
+    max-width:56ch;
+    margin:0 auto 40px;
+  }
+  .section-head h3{
+    font-family:'Cormorant', serif;
+    font-size:clamp(24px,2.8vw,32px);
+    font-weight:500;
+    margin-bottom:12px;
+  }
+  .section-head p{
+    font-size:13.5px;
+    color:rgba(28,28,26,0.6);
+  }
+
+  /* ---------- GRID ---------- */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    padding-bottom:80px;
+  }
+  @media (max-width:900px){
+    .grid{grid-template-columns:repeat(2,1fr);}
+    .hero-stone{grid-template-columns:1fr;}
+    .hero-stone-thumbs{grid-template-rows:unset; grid-template-columns:repeat(3,1fr);}
+  }
+  @media (max-width:560px){
+    .grid{grid-template-columns:1fr;}
+  }
+  .card{
+    text-decoration:none;
+    color:inherit;
+  }
+  .card .thumb{
+    position:relative;
+    aspect-ratio:4/5;
+    overflow:hidden;
+    background:#111;
+    margin-bottom:16px;
+    cursor:zoom-in;
+  }
+  .card .thumb img{
+    width:100%;height:100%;object-fit:cover;
+    transition:transform 0.5s ease;
+  }
+  .card:hover .thumb img{transform:scale(1.05);}
+  .card .thumb .play-btn{
+    position:absolute;
+    bottom:14px;left:50%;
+    transform:translateX(-50%);
+    width:44px;height:44px;
+    border-radius:50%;
+    background:rgba(10,10,10,0.55);
+    border:1px solid rgba(255,255,255,0.7);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    pointer-events:none;
+    transition:background 0.3s ease;
+  }
+  .card:hover .thumb .play-btn{background:rgba(184,147,90,0.85);}
+  .card .thumb .play-btn::after{
+    content:'';
+    border-style:solid;
+    border-width:8px 0 8px 13px;
+    border-color:transparent transparent transparent #fff;
+    margin-left:3px;
+  }
+  .card .spec{
+    font-size:12.5px;
+    color:rgba(28,28,26,0.55);
+    margin-bottom:6px;
+  }
+  .card .price{
+    font-family:'Cormorant', serif;
+    font-size:20px;
+    font-weight:500;
+    color:var(--ink);
+  }
+
+  /* ---------- CONTACT STRIP ---------- */
+  .contact{
+    background:#f7f5f1;
+    padding:64px 0;
+    text-align:center;
+  }
+  .contact .narrative-label{
+    font-size:13px;
+    letter-spacing:0.12em;
+    color:var(--gold);
+    margin-bottom:20px;
+  }
+  .contact h2{
+    font-family:'Cormorant', serif;
+    font-size:clamp(22px,2.6vw,30px);
+    font-weight:500;
+    margin-bottom:28px;
+  }
+  .contact a.mail{
+    display:inline-block;
+    font-size:14px;
+    color:var(--ink);
+    border-bottom:1px solid var(--gold);
+    padding-bottom:4px;
+    text-decoration:none;
+  }
+
+  .site-footer{
+    padding:32px 0;
+    font-size:12px;
+    color:rgba(28,28,26,0.5);
+    text-align:center;
+    border-top:1px solid var(--line);
+  }
+
+  /* ---------- LIGHTBOX ---------- */
+  .lightbox{
+    display:none;
+    position:fixed;inset:0;
+    background:rgba(10,10,10,0.92);
+    z-index:100;
+    align-items:center;
+    justify-content:center;
+  }
+  .lightbox.active{display:flex;}
+  .lightbox img,.lightbox video{max-width:92vw;max-height:88vh;object-fit:contain;}
+  .lightbox video{display:none;}
+  .lightbox-close{
+    position:absolute;top:24px;right:32px;
+    background:none;border:none;color:#fff;
+    font-size:32px;cursor:pointer;line-height:1;
+  }
+</style>
+</head>
+<body>
+
+  <div class="top-band">
+    <div class="side left">
+      <a class="back-link" href="index.html">← Collection</a>
+    </div>
+    <a class="logo-text" href="index.html">tono jewelry</a>
+    <div class="side right"></div>
+  </div>
+
+  <div class="page-head">
+    <div class="kicker">Nagar Valley, Pakistan</div>
+    <h1 class="serif">Aquamarine</h1>
+  </div>
+
+  <div class="wrap">
+
+    <div class="hero-stone">
+      <div class="hero-stone-main" onclick="openLightbox('6-02.jpg')">
+        <img src="6-02.jpg" alt="Aquamarine main specimen 17012g">
+      </div>
+      <div class="hero-stone-thumbs">
+        <img src="6-03.jpg" alt="Aquamarine main specimen detail" onclick="openLightbox('6-03.jpg')">
+        <img src="6-04.jpg" alt="Aquamarine main specimen detail" onclick="openLightbox('6-04.jpg')">
+        <img src="6-05.jpg" alt="Aquamarine main specimen detail" onclick="openLightbox('6-05.jpg')">
+      </div>
+    </div>
+    <div class="hero-stone-info">
+      <div>
+        <div class="badge">MAIN SPECIMEN</div>
+        <h2 class="serif">17,012 g Aquamarine Matrix</h2>
+        <div class="spec">350 × 380 × 280 mm ・ GGI鑑別書付き・無処理無加熱</div>
+      </div>
+      <div class="price">
+        <div class="amount">応相談</div>
+        <div class="label">PRICE ON REQUEST</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <a class="card" href="javascript:void(0)" onclick="openLightbox('IMG_9380.JPG','10.mp4')">
+        <div class="thumb"><img src="IMG_9380.JPG" alt="Aquamarine specimen"><div class="play-btn"></div></div>
+        <div class="spec">4,286 g ・ 219×149×110 mm</div>
+      </a>
+      <a class="card" href="javascript:void(0)" onclick="openLightbox('IMG_9379.JPG','9.mp4')">
+        <div class="thumb"><img src="IMG_9379.JPG" alt="Aquamarine specimen"><div class="play-btn"></div></div>
+        <div class="spec">2,378 g ・ 234×180×103 mm</div>
+      </a>
+      <a class="card" href="javascript:void(0)" onclick="openLightbox('IMG_9377.JPG','7.mp4')">
+        <div class="thumb"><img src="IMG_9377.JPG" alt="Aquamarine specimen"><div class="play-btn"></div></div>
+        <div class="spec">2,266 g ・ 155×102×84 mm</div>
+      </a>
+      <a class="card" href="javascript:void(0)" onclick="openLightbox('IMG_9372.JPG','2.mp4')">
+        <div class="thumb"><img src="IMG_9372.JPG" alt="Aquamarine specimen"><div class="play-btn"></div></div>
+        <div class="spec">1,684 g ・ 142×94×81 mm</div>
+      </a>
+      <a class="card" href="javascript:void(0)" onclick="openLightbox('IMG_9373.JPG','3.mp4')">
+        <div class="thumb"><img src="IMG_9373.JPG" alt="Aquamarine specimen"><div class="play-btn"></div></div>
+        <div class="spec">1,426 g ・ 139×108×105 mm</div>
+      </a>
+      <a class="card" href="javascript:void(0)" onclick="openLightbox('IMG_9374.JPG','4.mp4')">
+        <div class="thumb"><img src="IMG_9374.JPG" alt="Aquamarine specimen"><div class="play-btn"></div></div>
+        <div class="spec">980 g ・ 157×149×77 mm</div>
+      </a>
+      <a class="card" href="javascript:void(0)" onclick="openLightbox('IMG_9371.JPG','1.mp4')">
+        <div class="thumb"><img src="IMG_9371.JPG" alt="Aquamarine specimen"><div class="play-btn"></div></div>
+        <div class="spec">980 g ・ 171×102×106 mm</div>
+      </a>
+      <a class="card" href="javascript:void(0)" onclick="openLightbox('IMG_9375.JPG','5.mp4')">
+        <div class="thumb"><img src="IMG_9375.JPG" alt="Aquamarine specimen"><div class="play-btn"></div></div>
+        <div class="spec">744 g ・ 125×92×105 mm</div>
+      </a>
+      <a class="card" href="javascript:void(0)" onclick="openLightbox('IMG_9378.JPG','8.mp4')">
+        <div class="thumb"><img src="IMG_9378.JPG" alt="Aquamarine specimen"><div class="play-btn"></div></div>
+        <div class="spec">470 g ・ 113×104×72 mm</div>
+      </a>
+    </div>
+
+  </div>
+
+  <section class="contact">
+    <div class="wrap">
+      <div class="narrative-label serif">Enquiries & Trade Buyers</div>
+      <h2 class="serif">コレクター・宝飾業者の方はお気軽にご連絡ください。</h2>
+      <a class="mail" href="mailto:info@tono.ltd">info@tono.ltd</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    © 2026 tono jewelry · Tokyo, Japan
+  </footer>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
+    <video id="lightbox-video" controls playsinline onclick="event.stopPropagation()"></video>
+  </div>
+
+  <script>
+    // videoSrc を渡すと動画を、渡さなければ画像を表示する
+    function openLightbox(imgSrc, videoSrc){
+      const img = document.getElementById('lightbox-img');
+      const vid = document.getElementById('lightbox-video');
+      if(videoSrc){
+        img.style.display = 'none';
+        vid.style.display = 'block';
+        vid.src = videoSrc;
+        vid.play();
+      } else {
+        vid.pause();
+        vid.removeAttribute('src');
+        vid.style.display = 'none';
+        img.style.display = 'block';
+        img.src = imgSrc;
+      }
+      document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox(){
+      const vid = document.getElementById('lightbox-video');
+      vid.pause();
+      document.getElementById('lightbox').classList.remove('active');
+    }
+    window.addEventListener('load', function(){ window.scrollTo(0,0); });
+  </script>
+
+</body>
+</html>
