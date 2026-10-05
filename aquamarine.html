@@ -99,7 +99,7 @@
     aspect-ratio:4/3;
     overflow:hidden;
     background:#111;
-    cursor:zoom-in;
+    cursor:pointer;
   }
   .hero-stone-main img{width:100%;height:100%;object-fit:cover;}
   .hero-stone-thumbs{
@@ -309,8 +309,8 @@
   <div class="wrap">
 
     <div class="hero-stone">
-      <div class="hero-stone-main" onclick="openLightbox('6-02.jpg')">
-        <img src="6-02.jpg" alt="Aquamarine main specimen 17012g">
+      <div class="hero-stone-main" onclick="openLightbox('6-02.jpg','6-1.mp4')">
+        <img src="6-02.jpg" alt="Aquamarine main specimen 17012g"><div class="play-btn" style="position:absolute;bottom:14px;left:50%;transform:translateX(-50%);width:44px;height:44px;border-radius:50%;background:rgba(10,10,10,0.55);border:1px solid rgba(255,255,255,0.7);display:flex;align-items:center;justify-content:center;pointer-events:none;"></div>
       </div>
       <div class="hero-stone-thumbs">
         <img src="6-03.jpg" loading="lazy" alt="Aquamarine main specimen detail" onclick="openLightbox('6-03.jpg')">
