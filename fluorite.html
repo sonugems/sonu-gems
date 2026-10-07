@@ -133,6 +133,19 @@
     border-color:transparent transparent transparent #fff;
     margin-left:3px;
   }
+  .soldout-badge{
+    position:absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    font-size:12px;
+    letter-spacing:0.14em;
+    color:#fff;
+    background:rgba(10,10,10,0.72);
+    border:1px solid rgba(255,255,255,0.7);
+    padding:8px 18px;
+    white-space:nowrap;
+    pointer-events:none;
+  }
   .card .spec{
     font-size:15px;
     color:var(--ink);
@@ -217,6 +230,10 @@
       <a class="card" href="javascript:void(0)" onclick="openLightbox('fl2.jpg')">
         <div class="thumb"><img src="fl2.jpg" alt="Fluorite specimen" loading="lazy"></div>
         <div class="spec">374 g</div>
+      </a>
+      <a class="card" href="javascript:void(0)" onclick="openLightbox('fl3.jpg')">
+        <div class="thumb"><img src="fl3.jpg" alt="Fluorite specimen" loading="lazy"><div class="soldout-badge">SOLD OUT</div></div>
+        <div class="spec">1,082 g</div>
       </a>
     </div>
 
